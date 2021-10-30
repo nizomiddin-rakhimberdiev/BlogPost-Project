@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col">
+        <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"/>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+
+            <div class="card-body">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.summary }}</p>
+            </div>
+            <div class="card-footer">
+                <form action="" method="post">{% csrf_token %}
+                    <div>
+                        <h6>Shu postni o'chirasizmi?</h6>
+                        <input type="submit" class="btn btn-danger" value="O'chirish">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
